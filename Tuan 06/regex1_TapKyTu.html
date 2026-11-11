@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tập Ký Tự (Character classes) </title>
+</head>
+
+<body>
+    <span>hello world!</span> 
+
+    <script>
+
+        // [abc] — một ký tự bất kỳ trong nhóm a, b, c
+        function regexVD3() {
+            var pattern = /[aeiou]/g;
+            var st = "hello";
+            var arr = st.match(pattern);
+            console.log(arr)
+        }
+        regexVD3()
+
+        function regex1() {
+            var pattern = /[135]/g;
+            var st = "12345";
+            var arr = st.match(pattern)
+            console.log(arr)
+        }
+        regex1()
+
+        function regex2() {
+            var pattern = /[Hh]ello/g;
+            var st = "Hello hello HELLO";
+            var arr = st.match(pattern)
+            console.log(arr)
+        }
+        regex2()
+
+        function regex3() {
+            var pattern = /[.,!?]/g;
+            var st = "Xin chào, bạn khỏe không? Tốt!";
+            var arr = st.match(pattern);
+            console.log(arr.length)
+        }
+        regex3()
+
+        // [^abc] — một ký tự KHÔNG phải a, b, c
+        function VD1_2() {
+            var p = /[^abc]/g;
+            var st = "abcde";
+            var arr = st.match(p); //ki tu nao khong thuoc nhom abc thi lay
+            console.log(arr)
+        }
+        VD1_2()
+
+        function VD2_2() {
+            var p = /[^0-9]/g;
+            var st = "a1b2";
+            var arr = st.replace(p, ""); // neu khong la so thi xoa het
+            console.log(arr)
+        }
+        VD2_2()
+
+        function VD3_2() {
+            var p = /[^ ]+/g;
+            var st = "xin chào bạn";
+            var arr = st.match(p);
+            console.log(arr)
+        }
+        VD3_2()
+
+        function regex12() {
+            var p = /[^ueoai]/g;
+            var st = "programming";
+            var arr = st.replace(p, ""); // xoa cac chu khong phai nguyen am "ue oai"
+            console.log(arr)
+        }
+        regex12()
+
+        function regex22() {
+            var p = /"[^"]+"/g;
+            var st = 'nói "xin chào" và "tạm biệt"';
+            var arr = st.match(p);
+            console.log(arr)
+        }
+        regex22()
+
+        function regex32() {
+            var p = /[^a-z0-9]/;
+            var st = "a1,b2;c3";
+            var arr = st.split(p);
+            console.log(arr)
+        }
+        regex32()
+
+        // [a-g] — một ký tự trong khoảng từ a đến g
+        function regex13() {
+            var p = /[A-Z]/g;
+            var st = "Học ReactJS Và TypeScript";
+            var arr = st.match(p); 
+            console.log(arr)
+        }
+        regex13()
+
+        function regex23() {
+            var p = /^#[0-9a-fA-F]{6}$/;
+            var st = "#1a2B3c";
+            var arr = st.match(p);
+            console.log(arr)
+        }
+        regex23()
+
+        function regex33() {
+            var p = /CNTT-[A-D]/g;
+            var st = "CNTT-A CNTT-E CNTT-C";
+            var arr = st.match(p);
+            console.log(arr)
+        }
+        regex33()
+    </script>
+</body>
+
+</html>

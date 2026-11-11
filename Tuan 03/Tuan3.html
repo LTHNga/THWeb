@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giao dien 1</title>
+        <style>
+            .container {
+                display: grid;
+
+                grid-template-areas:
+                    "menu"
+                    "promotions"
+                    "promotions_1"
+                    "promotions_2"
+                    "promotions_3"
+                    "footer";
+
+                gap: 10px;
+            }
+
+            .container .menu {
+                grid-area: menu;
+            }
+
+            .container .promotions {
+                grid-area: promotions;
+            }
+
+            .container .promotions_1 {
+                grid-area: promotions_1;
+            }
+
+            .container .promotions_2 {
+                grid-area: promotions_2;
+            }
+
+            .container .promotions_3 {
+                grid-area: promotions_3;
+            }
+
+            .container .footer {
+                grid-area: footer;
+            }
+
+            #container_menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            ul li {
+                display: inline-block; 
+                margin: 10px;
+            }
+
+            #promotions {
+                display: flex;
+                justify-content: center;
+            }
+
+            .promotions1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                border: 1px solid #b0e7ec;
+                border-radius: 12px;
+                padding: 50px;
+                max-width: 1200px;
+                margin: 30px auto;
+            }
+
+            .promotions1 img {
+
+                max-width: 450px;
+
+                height: auto;
+
+                border-radius: 12px;
+            }
+
+            .promotions1 h3 {
+
+                font-size: 32px;
+
+                margin-bottom: 20px;
+            }
+
+            .promotions1 p {
+
+                font-size: 20px;
+
+                line-height: 1.8;
+            }
+
+            .bt {
+                background-color: rgb(12, 143, 101);
+                color: aliceblue;
+                font-size: 20px;
+                padding: 15px 29px;
+                border: none;
+                cursor: pointer;/**/
+            }
+
+            .promotion2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                border: 1px solid #b0e7ec;
+                border-radius: 12px;
+                padding: 50px;
+                max-width: 1200px;
+                margin: 30px auto;
+            }
+
+            .promotion2 img {
+                max-width: 450px;
+                height: auto;
+                border-radius: 12px;
+            }
+
+            .promotion2 h3 {
+                font-size: 32px;
+
+                margin-bottom: 20px;
+            }
+
+            .promotion2 p {
+                font-size: 20px;
+
+                line-height: 1.8;
+            }
+
+            .footer-column ul li {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .promotions_4 {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                background: #748ace;
+                padding: 20px;
+            }
+
+            .footer-column {
+                flex: 1;
+                min-width: 200px;
+                margin: 0 10px;
+                color: #e1d3d3;
+            }
+
+            .footer-column h3 {
+                margin-bottom: 10px;
+            }
+
+            .footer-column ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .footer-column ul li {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .button {
+                background-color: rgb(128, 8, 226);
+                color: rgb(195, 220, 242);
+            }
+
+            .mail .icon {
+                margin: 0 8px;
+                width: 20px;
+                height: 20px;
+            }
+
+        </style>
+
+    </head>
+
+
+    <body>
+
+        <div class="container">
+
+
+            <!-- MENU -->
+
+            <div id="container_menu" class="menu">
+
+                <div>
+                    <ul>
+                        <li>Shop</li>
+                        <li>Offers</li>
+                        <li>Our story</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <img src="./IMAGES/logo.png" alt="">
+                </div>
+
+
+                <div>
+                    <input type="search" placeholder="Search product">
+                    <img src="./IMAGES/trolley.png" alt="" width="30" height="20">
+                    <img src="./IMAGES/Avatar 1.png 1.png" alt="">
+                </div>
+            </div>
+
+
+
+            <!-- TIÊU ĐỀ -->
+            <div id="promotions" class="promotions">
+
+                <div>
+                    <h1><b>Promotions</b></h1>
+                </div>
+
+            </div>
+
+            <!-- PROMOTION 1 -->
+            <div id="promotions_1" class="promotions1">
+
+                <div>
+                    <img src="./IMAGES/Image 1 (1).png" alt="">
+                </div>
+
+                <div>
+                    <h3>Promotion title</h3>
+                    <p>
+                        Et ipsum irure amet cupidatat mollit exercitation
+                        <br>consequat dúi aliquip. Reprehenderit Lorem
+                        <br>veniam pariatur esee pariatur in aute tempor au<br>
+                        <i> *Velit deserunt elit proident velit anim adipisicing</i>
+                    </p>
+                    <button class="bt">Shop Now</button>
+                </div>
+            </div>
+
+
+            <!-- PROMOTION 2 -->
+
+            <div id="promotions_2" class="promotions1">
+                <div>
+                    <h3>Promotion title</h3>
+                    <p>
+                        Et ipsum irure amet cupidatat mollit exercitation
+                        <br>
+                        consequat dúi aliquip. Reprehenderit Lorem
+                        <br>
+                        veniam pariatur esee pariatur in aute tempor au
+                        <br>
+                        <i>
+                            *Velit deserunt elit proident velit anim adipisicing
+                        </i>
+                    </p>
+                    <button class="bt">
+                        Shop Now
+                    </button>
+                </div>
+
+                <div>
+                    <img src="./IMAGES/Image 1 (2).png" alt="">
+                </div>
+            </div>
+
+
+            <!-- PROMOTION 3 -->
+            <div id="promotions_3" class="promotion2">
+                <div>
+                    <img src="./IMAGES/Image 1 (3).png"
+                        alt="Gift for your skin">
+                </div>
+
+                <div>
+                    <h3>
+                        Gift for your skin
+                    </h3>
+                    <p>
+                        Enim officia magna ut esse aliquip irure
+                        consectetur dolor dolor commodo et. Cupid
+                    </p>
+                    <button class="bt">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- ================= FOOTER ================= -->
+            <footer class="footer">
+                <div class="promotions_4">
+                    <div class="footer-column">
+                        <h3>About</h3>
+                        <ul>
+                            <li>Home</li>
+                            <li>Shop</li>
+                            <li>Our story</li>
+                            <li>Blogs</li>
+                        </ul>
+
+                        <select>
+                            <option value="en">English</option>
+                            <option value="en">VietNam</option>
+                            <option value="en"> Phap</option>
+                            <option value="en">Trung</option>
+                            <option value="en">y</option>
+                        </select>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Help</h3>
+                        <ul>
+                            <li>Shipping & Returns</li>
+                            <li>Track Order</li>
+                            <li>FAQs</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <p>Phone: (+1) 1234567893</p>
+                        <p>Email: name@email.com</p>
+                    </div>
+
+                    <div class="footer-column"></div>
+                        <h3> Receive new promotions </h3>
+                        <p>Duis ea tempor commodo amet reprehende</p>
+
+                        <form class="mail">
+                            <input type="email" placeholder="Input your email">
+                            <button type="submit" class="button">Subscribe</button>
+                        </form>
+
+                        <img src="./IMAGES/Twitter 1.png" alt="">
+                        <img src="./IMAGES/Facebook 1.png" alt="">
+                        <img src="./IMAGES/LinkedIn 1.png" alt="">
+
+                        <img src="./IMAGES/YouTube 1.png" alt="">
+                        <p>2022 Brand, Inc. Privacy Tém Sitemap</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </body>
+
+    </html>

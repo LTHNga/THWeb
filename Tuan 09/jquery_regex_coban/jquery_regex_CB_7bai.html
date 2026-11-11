@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_regex_7bai_coban</title>
+</head>
+<body>
+    <h3>Kiểm tra chuỗi</h3>
+    <input type="text" id="txt" placeholder="Nhập chuỗi...">
+    <button id="btn">kiểm tra</button>
+    <p id="kq">Kết quả</p>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+
+        // Bai 1: Kiem tra chuoi so
+        function bai01() {
+            $("#btn").on("click", () => {
+                var pattern = /^\d+$/;
+                var str = $("#txt").val();
+                var result = pattern.test(str);
+                
+                if(result) {
+                    $("#kq").text("ĐÚNG pattern");
+                }
+                else {
+                    $("#kq").text("SAI pattern");
+                }
+            });
+        }
+        bai01()
+
+        // Bai 2: Kiem tra MSSV
+        function bai02() { 
+            $("#btn").on("click", () => {
+                var pattern = /^\d{10}$/g;
+                var str = $("#txt").val();
+                var result = pattern.test(str);
+
+                if(result) {
+                    $("#kq").text("ĐÚNG pattern");
+                }
+                else {
+                    $("#kq").text("SAI pattern");
+                }
+            });
+        }
+        bai02()
+
+        // Bai 3: Kiem tra ten dang nhap
+        function bai03() { 
+            $("#btn").on("click", () => {
+                var pattern = /^[a-z0-9_]{5,15}$/g;
+                var str = $("#txt").val();
+                var result = pattern.test(str);
+
+                if(result) {
+                    $("#kq").text("ĐÚNG pattern");
+                }
+                else {
+                    $("#kq").text("SAI pattern");
+                }
+            });
+        }
+        bai03()
+
+        // Bai 4: Kiem tra so dienn thoai
+        function bai04() { 
+            $("#btn").on("click", () => {
+                var pattern = /^0\d{9}$/g;
+                var str = $("#txt").val();
+                var result = pattern.test(str);
+
+                if(result) {
+                    $("#kq").text("ĐÚNG pattern");
+                }
+                else {
+                    $("#kq").text("SAI pattern");
+                }
+            });
+        }
+        bai04()
+
+        // Bai 5: Kiem tra Email
+        function bai05() { 
+            $("#btn").on("click", () => {
+                var pattern = /^\S+@\S+\.\S+$/g;
+                var str = $("#txt").val();
+                var result = pattern.test(str);
+
+                if(result) {
+                    $("#kq").text("ĐÚNG pattern");
+                }
+                else {
+                    $("#kq").text("SAI pattern");
+                }
+            });
+        }
+        bai05()
+
+        //  Bai 6: Kiem tra ma lop
+        function bai06() { 
+            $("#btn").on("click", () => {
+                var pattern = /^[A-Z]{2}\d{3}$/g;
+                var str = $("#txt").val();
+                var result = pattern.test(str);
+
+                if(result) {
+                    $("#kq").text("ĐÚNG pattern");
+                }
+                else {
+                    $("#kq").text("SAI pattern");
+                }
+            });
+        }
+        bai06()
+
+        // Bai 7: Kiem tra ngay thang
+        function bai07() { 
+            $("#btn").on("click", () => {
+                var pattern = /^\d{2}\/\d{2}\/\d{4}$/g;
+                var str = $("#txt").val();
+                var result = pattern.test(str);
+
+                if(result) {
+                    $("#kq").text("ĐÚNG pattern");
+                }
+                else {
+                    $("#kq").text("SAI pattern");
+                }
+            });
+        }
+        bai07()
+
+
+
+
+
+
+
+
+
+
+
+        function kiemtraHoTen() {
+            var hoten = document.getElementById("hoten").value;
+            var pattern = /^[A-Za-zÀ-ỹ\S]{2,30}$/;
+            var arr = hoten.match(pattern);
+
+            if (arr)
+                return true;
+
+            alert("Họ tên không hợp lệ!")
+            document.getElementById("hoten").focus();
+            return false;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

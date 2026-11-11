@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1 nhap bien in ra bang</title>
+</head>
+
+<body>
+    <!-- <table border="1">
+        <tr>
+            <td>MSSV</td>
+            <td>Ho Ten</td>
+            <td>Lop</td>
+        </tr>
+        <tr>
+            <td>24700831</td>
+            <td>Le Thi Huong Nga</td>
+            <td>DHHTTT20B_TCTA</td>
+        </tr>
+    </table> -->
+
+    <script>
+        var mssv = prompt("Nhap ma so sinh vien");
+        var hoten = prompt("Nhap ho ten sinh vien");
+        var lop = prompt("Nhap lop");
+
+        document.write("<table border='1' align='center' cellpadding='5'>");
+        document.write("<tr><td>MSSV</td><td>Ho Ten</td><td>Lop</td></tr>");
+        document.write("<tr><td>" + mssv + "</td><td>" + hoten + "</td><td>" + lop + "</td></tr>");
+        document.write("</table>");
+
+        // document.write("Thong sinh vien vua nhap la: " + mssv + " - " + hoten + " - " + lop);
+    </script>
+</body>
+
+</html>
+<!-- lam 1 bai co 4 nut + - nhan chia, nhan vao nut + thi hien o nhap va enter se ra kq -->

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ký tự thoát (Escaped characters)</title>
+</head>
+
+<body>
+    <span>hello world!</span>
+    <script>
+
+        // \. \* \\ — tìm đúng ký tự đặc biệt
+        function regex1() {
+            var p = /\bjs\b/g;
+            var st = "js và reactjs dùng js";
+            var arr = st.match(p);
+            console.log(arr);
+            console.log(arr.length);
+        }
+        regex1()
+
+        function regex2() {
+            var st = "var x; var variable;";
+            var rs = st.replace(/\bvar\b/g, "let");
+            console.log(rs);
+        }
+        regex2()
+
+        function regex3() {
+            var p = /\w*\Bing\B\w*/g;
+            var st = "sing singer ingot";
+            var arr = st.match(p);
+            console.log(arr);
+        }
+        regex3()
+
+        // \t \n \r — tab, xuống dòng, về đầu dòng
+        function regex4() {
+            var st = "a\nb\nc";
+            var soDong = st.match(/\n/g).length + 1;
+            console.log(soDong);
+        }
+        regex4()
+
+        function regex5() {
+            var st = "xin\tchào\tbạn";
+            var rs = st.replace(/\t/g, "    ");
+            console.log(rs);
+        }
+        regex5()
+
+        function regex6() {
+            var st = "a\n\n\n\nb";
+            var rs = st.replace(/\n\n+/g, "\n\n");
+            console.log(rs);
+        }
+        regex6()
+    </script>
+</body>
+
+</html>

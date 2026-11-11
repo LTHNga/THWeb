@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lượng từ và lựa chọn (Quantifiers & Alternation)</title>
+</head>
+
+<body>
+    <span>hello world!</span>
+    <script>
+
+        // a* a+ a? — 0 lần trở lên, 1 lần trở lên, 0 hoặc 1 lần
+        function regex1() {
+            var p = /go+/g;
+            var st = "g go gooo";
+            var arr = st.match(p);
+            console.log(arr);
+        }
+        regex1()
+
+        function regex2() {
+            var p = /^-?\d+$/;
+            console.log(p.test("-5"));
+            console.log(p.test("5"));
+            console.log(p.test("--5"));
+        }
+        regex2()
+
+        function regex3() {
+            var p = /x\s*=\s*5/;
+            console.log(p.test("x=5"));
+            console.log(p.test("x = 5"));
+            console.log(p.test("x  =5"));
+        }
+        regex3()
+
+        // a{5} a{2,} — đúng 5 lần, từ 2 lần trở lên
+        function regex4() {
+            var p = /^\d{8}$/;
+            console.log(p.test("20261234"));
+            console.log(p.test("2026123"));
+        }
+        regex4()
+
+        function regex5() {
+            var p = /\b[a-z]{5,}\b/g;
+            var st = "i love regex and javascript";
+            var arr = st.match(p);
+            console.log(arr);
+        }
+        regex5()
+
+        function regex6() {
+            var p = /^0\d{9}$/;
+            console.log(p.test("0901234567"));
+            console.log(p.test("901234567"));
+            console.log(p.test("09012345678"));
+        }
+        regex6()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo (Anchors)</title>
+</head>
+
+<body>
+    <span>hello world!</span>
+    <script>
+
+        // ^abc$ — bắt đầu / kết thúc chuỗi
+        function regex1() {
+            var p = /^http/;
+            var st = "https://a.com";
+            console.log(p.test(st));
+        }
+        regex1()
+
+        function regex2() {
+            var p = /\.jsx$/;
+            var st = "App.jsx";
+            console.log(p.test(st));
+        }
+        regex2()
+
+        function regex3() {
+            var p = /^\d+/gm;
+            var st = "1. Mở\n2. Đóng\n3. Lưu";
+            var arr = st.match(p);
+            console.log(arr);
+        }
+        regex3()
+
+        // \b \B — ranh giới từ / không phải ranh giới từ
+        function regex4() {
+            var p = /\bjs\b/g;
+            var st = "js và reactjs dùng js";
+            var arr = st.match(p);
+            console.log(arr);
+            console.log(arr.length);
+        }
+        regex4()
+
+        function regex5() {
+            var st = "var x; var variable;";
+            var rs = st.replace(/\bvar\b/g, "let");
+            console.log(rs);
+        }
+        regex5()
+
+        function regex6() {
+            var p = /\w*\Bing\B\w*/g;
+            var st = "sing singer ingot";
+            var arr = st.match(p);
+            console.log(arr);
+        }
+        regex6()
+    </script>
+</body>
+
+</html>

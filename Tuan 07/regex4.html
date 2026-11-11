@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm và nhìn quanh (Groups & Lookaround)</title>
+</head>
+
+<body>
+    <span>hello world!</span>
+    <script>
+
+        // (abc) — nhóm bắt (capture group)
+        function regex1() {
+            var p = /(\w+)@([\w.]+)/;
+            var st = "tien@gmail.com";
+            var arr = st.match(p);
+            console.log("Tên:", arr[1]);
+            console.log("Tên miền:", arr[2]);
+        }
+        regex1()
+
+        function regex2() {
+            var st = "25/09/2026";
+            var rs = st.replace(/(\d{2})\/(\d{2})\/(\d{4})/,"$3-$2-$1");
+            console.log(rs);
+        }
+        regex2()
+
+        function regex3() {
+            var p = /^(ab)+$/;
+            console.log(p.test("ababab"));
+            console.log(p.test("abba"));
+        }
+        regex3()
+
+        // \1 — tham chiếu ngược tới nhóm 1
+        function regex4() {
+            var p = /(\d)\1/g;
+            var st = "112345566";
+            var arr = st.match(p);
+            console.log(arr);
+        }
+        regex4()
+
+        function regex5() {
+            var p = /<(\w+)>.*?<\/\1>/g;
+            var st = "<b>x</b><i>y</b>";
+            var arr = st.match(p);
+            console.log(arr);
+        }
+        regex5()
+
+        function regex6() {
+            var p = /^(\w)(\w)\2\1$/;
+            console.log(p.test("abba"));
+            console.log(p.test("abab"));
+        }
+        regex6()
+
+    </script>
+</body>
+
+</html>
